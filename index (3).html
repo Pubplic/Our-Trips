@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رحلة الشفاء | التسجيل للسفر العلاجي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+
+<header>
+  <a href="index.html" class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9C.5 8 3 4.5 6.5 4.5c2 0 3.7 1.2 5.5 3.5 1.8-2.3 3.5-3.5 5.5-3.5C21 4.5 23.5 8 21.5 12 19 16.5 12 21 12 21z"/></svg>
+    رحلة الشفاء
+  </a>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#sections">أقسامنا</a>
+    <a href="#login">تسجيل الدخول</a>
+    <a href="#contact">تواصل معنا</a>
+    <a href="#login" class="btn-nav">دخول</a>
+  </nav>
+</header>
+
+<!-- البطل -->
+<div class="hero" id="home">
+  <span class="badge">✦ منصة السفر العلاجي الأولى ✦</span>
+  <h1>سافر للعلاج بأمان وراحة<br><em>نحن معك في كل خطوة</em></h1>
+  <p>منصة متكاملة لتسجيل المرضى والمرافقين للسفر العلاجي، مع تنسيق كامل مع المستشفيات ومتابعة مستمرة لرحلتك من التسجيل حتى العودة بإذن الله.</p>
+  <div class="btns">
+    <a href="patient.html" class="btn btn-p">سجّل الآن كمريض</a>
+    <a href="#sections" class="btn btn-o">تعرّف على أقسامنا</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>+5000</b><span>مريض تمت خدمته</span></div>
+    <div class="stat"><b>+12</b><span>دولة علاجية</span></div>
+    <div class="stat"><b>98%</b><span>نسبة رضا المرضى</span></div>
+  </div>
+</div>
+
+<!-- من نحن -->
+<section id="about">
+  <div class="sec-title"><h2><em>من</em> نحن</h2><div class="line"></div></div>
+  <div class="about">
+    <div>
+      <h3>رفيقك الموثوق في رحلة العلاج</h3>
+      <p>«رحلة الشفاء» منصة إنسانية متخصصة في تنظيم السفر العلاجي للمرضى ومرافقيهم. نرتّب لك كل تفاصيل رحلتك العلاجية بعناية، من لحظة التسجيل حتى عودتك إلى الوطن بإذن الله.</p>
+      <div class="feat"><span>🏥</span> التنسيق الكامل مع المستشفيات ومراكز العلاج في أكثر من 12 دولة، بما يشمل حجز المواعيد الطبية وإرسال الملف الطبي واستقبال ردود الأطباء.</div>
+      <div class="feat"><span>👥</span> التنسيق الكامل للمرافقين: تسجيلهم وربطهم بالمريض، وتأمين تذاكر سفرهم وإقامتهم ومتابعة أوضاعهم طوال فترة العلاج.</div>
+      <div class="feat"><span>📋</span> متابعة يومية لحالة الطلب مع رقم متابعة خاص يمكّنك من معرفة كل جديد في أي وقت.</div>
+    </div>
+    <div class="img-box"><img src="images/patient.png" alt="مريض يتلقى الرعاية الطبية في المستشفى" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;height:400px;background:linear-gradient(135deg,#e3f2f6,#cde9f0);align-items:center;justify-content:center;color:var(--primary-d);font-weight:800;font-size:18px;text-align:center;padding:20px">🖼️ لم يتم العثور على الصورة<br>تأكد من وجود مجلد images وبداخله الملف patient.png</div></div>
+  </div>
+</section>
+
+<!-- الأقسام -->
+<section id="sections">
+  <div class="sec-title"><h2><em>أقسام</em>نا</h2><div class="line"></div></div>
+  <div class="cards">
+    <a class="card" href="patient.html">
+      <div class="icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/><path d="M12 22V12M2 7l10 5 10-5"/></svg></div>
+      <h3>قسم تسجيل المرضى</h3>
+      <p>سجّل بياناتك ونوع إصابتك وتقريرك الطبي لنبدأ بتنسيق رحلتك العلاجية فوراً.</p>
+      <span class="go">تسجيل مريض ←</span>
+    </a>
+    <a class="card" href="companions.html">
+      <div class="icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <h3>قسم المرافقين</h3>
+      <p>سجّل نفسك مرافقاً لمريض، وسنهتم بتذاكر سفرك وإقامتك ومتابعة أوضاعك معه.</p>
+      <span class="go">تسجيل مرافق ←</span>
+    </a>
+    <a class="card" href="appointments.html">
+      <div class="icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+      <h3>حجز المواعيد</h3>
+      <p>احجز موعدك مع أفضل المستشفيات والاختصاصات في الدولة التي تناسب حالتك.</p>
+      <span class="go">حجز موعد ←</span>
+    </a>
+    <a class="card" href="tracking.html">
+      <div class="icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h3>متابعة الرحلة</h3>
+      <p>تتبّع حالة طلبك لحظة بلحظة: المراجعة، التنسيق مع المستشفى، التأشيرة والتذاكر.</p>
+      <span class="go">متابعة الحالة ←</span>
+    </a>
+  </div>
+</section>
+
+<!-- تسجيل الدخول -->
+<section id="login">
+  <div class="sec-title"><h2>تسجيل <em>الدخول</em></h2><div class="line"></div></div>
+  <div class="login-wrap">
+    <h3>مرحباً بعودتك 👋</h3>
+    <p>الدخول متاح للحسابات المعتمدة فقط</p>
+    <form id="loginForm">
+      <div class="field"><label>رقم الهوية / اسم المستخدم</label><input type="text" id="username" required placeholder="أدخل رقم الهوية أو اسم المستخدم"></div>
+      <div class="field"><label>كلمة المرور</label><input type="password" id="password" required placeholder="••••••••"></div>
+      <button type="submit" class="btn btn-p" style="width:100%">دخول</button>
+      <div class="form-msg" id="loginMsg"></div>
+    </form>
+    <div class="note">🔒 إنشاء الحسابات يتم من إدارة المنصة فقط — تواصل معنا للحصول على حسابك</div>
+  </div>
+</section>
+
+<!-- تواصل -->
+<section id="contact">
+  <div class="sec-title"><h2>تواصل <em>معنا</em></h2><div class="line"></div></div>
+  <div class="contact-grid">
+    <div class="contact-item"><div class="c-icon">📞</div><b>الهاتف</b><span>+963 900 000 000</span></div>
+    <div class="contact-item"><div class="c-icon">✉️</div><b>البريد الإلكتروني</b><span>info@ra7a-shifa.com</span></div>
+    <div class="contact-item"><div class="c-icon">💬</div><b>واتساب</b><span>+963 900 000 000</span></div>
+    <div class="contact-item"><div class="c-icon">📍</div><b>العنوان</b><span>دمشق، سوريا</span></div>
+  </div>
+</section>
+
+<footer>جميع الحقوق محفوظة © 2026 — <b>رحلة الشفاء</b> | منصة السفر العلاجي للمرضى والمرافقين</footer>
+</div>
+
+<script>
+const c=document.getElementById('bgCanvas'),x=c.getContext('2d');let W,H,ps=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<60;i++)ps.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+.5,v:(Math.random()-.5)*.3,o:Math.random()*.3+.1});
+(function an(){x.clearRect(0,0,W,H);ps.forEach(p=>{p.x+=p.v;p.y+=p.v;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(14,116,144,'+p.o+')';x.fill()});requestAnimationFrame(an)})();
+
+document.getElementById('loginForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const u=document.getElementById('username').value.trim(),p=document.getElementById('password').value.trim();
+  const msg=document.getElementById('loginMsg');
+  if(u==='admin'&&p==='123456'){msg.textContent='✅ تم تسجيل الدخول بنجاح، أهلاً بك!';msg.className='form-msg ok'}
+  else{msg.textContent='❌ بيانات الدخول غير صحيحة أو الحساب غير معتمد';msg.className='form-msg err'}
+});
+</script>
+</body>
+</html>
