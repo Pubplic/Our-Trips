@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حجز موعد طبي | رحلة الشفاء</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:26px}
+.choice button{padding:18px 10px;border-radius:16px;border:2px solid var(--border);background:#fbfdfe;font-size:17px;font-weight:800;color:var(--muted);cursor:pointer;transition:.3s;font-family:'Tajawal',sans-serif}
+.choice button .big{font-size:30px;display:block;margin-bottom:6px}
+.choice button.active{border-color:var(--primary);background:#e3f2f6;color:var(--primary-d);box-shadow:0 6px 20px rgba(14,116,144,.15)}
+</style>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+
+<header>
+  <a href="index.html" class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9C.5 8 3 4.5 6.5 4.5c2 0 3.7 1.2 5.5 3.5 1.8-2.3 3.5-3.5 5.5-3.5C21 4.5 23.5 8 21.5 12 19 16.5 12 21 12 21z"/></svg>
+    رحلة الشفاء
+  </a>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html#about">من نحن</a>
+    <a href="index.html#sections">أقسامنا</a>
+    <a href="index.html#login">تسجيل الدخول</a>
+    <a href="index.html#contact">تواصل معنا</a>
+    <a href="index.html#login" class="btn-nav">دخول</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="sec-title" style="margin-bottom:0"><h2><em>حجز موعد طبي</em></h2><div class="line"></div></div>
+  <p>اختر نوع الحجز ثم عبّئ البيانات المطلوبة — سيتم تأكيد الموعد عبر رسالة أو اتصال</p>
+</div>
+
+<section>
+  <div class="form-wrap">
+    <h3>📅 حجز موعد طبي</h3>
+    <p>اختر: هل الحجز لمريض أم لمرافق؟</p>
+
+    <div class="choice">
+      <button type="button" id="btnPatient" class="active"><span class="big">🩺</span>حجز لمريض</button>
+      <button type="button" id="btnCompanion"><span class="big">👥</span>حجز لمرافق</button>
+    </div>
+
+    <form id="regForm">
+      <!-- حقول المريض -->
+      <div id="patientFields">
+        <div class="row2">
+          <div class="field"><label>اسم المريض الكامل *</label><input type="text" placeholder="الاسم الثلاثي"></div>
+          <div class="field"><label>رقم الهاتف *</label><input type="tel" placeholder="+963 ..."></div>
+        </div>
+        <div class="field"><label>الاختصاص الطبي المطلوب *</label>
+          <select>
+            <option value="">— اختر الاختصاص —</option>
+            <option>جراحة عامة</option><option>جراحة تجميل وإصلاح</option><option>قلب وأوعية دموية</option>
+            <option>أورام</option><option>عظام</option><option>أعصاب</option><option>عيون</option><option>أطفال</option>
+          </select>
+        </div>
+        <div class="row2">
+          <div class="field"><label>الدولة المفضلة للعلاج *</label>
+            <select>
+              <option value="">— اختر الدولة —</option>
+              <option>تركيا</option><option>الأردن</option><option>مصر</option><option>ألمانيا</option><option>الهند</option>
+            </select>
+          </div>
+          <div class="field"><label>التاريخ المفضل للموعد *</label><input type="date"></div>
+        </div>
+        <div class="field"><label>وصف الحالة / تفاصيل الموعد</label><textarea placeholder="مثال: استشارة أولى لفحص الإصابة..."></textarea></div>
+      </div>
+
+      <!-- حقول المرافق -->
+      <div id="companionFields" style="display:none">
+        <div class="row2">
+          <div class="field"><label>اسم المرافق الكامل *</label><input type="text" placeholder="الاسم الثلاثي"></div>
+          <div class="field"><label>رقم هوية المرافق *</label><input type="text" placeholder="رقم الهوية أو الجواز"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>رقم هاتف المرافق *</label><input type="tel" placeholder="+963 ..."></div>
+          <div class="field"><label>صلة القرابة بالمريض *</label>
+            <select>
+              <option value="">— اختر —</option>
+              <option>أب / أم</option><option>ابن / ابنة</option><option>زوج / زوجة</option>
+              <option>أخ / أخت</option><option>قريب آخر</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>اسم المريض المرافَق *</label><input type="text" placeholder="الاسم كما سُجّل بالمنصة"></div>
+        <div class="row2">
+          <div class="field"><label>نوع الموعد المطلوب *</label>
+            <select>
+              <option value="">— اختر —</option>
+              <option>فحص طبي للمرافق</option><option>تطعيمات سفر</option><option>استشارة طبية</option><option>موعد مصاحب للمريض</option>
+            </select>
+          </div>
+          <div class="field"><label>التاريخ المفضل *</label><input type="date"></div>
+        </div>
+        <div class="field"><label>ملاحظات إضافية</label><textarea placeholder="أي تفاصيل تودّ إخبارنا بها..."></textarea></div>
+      </div>
+
+      <button type="submit" class="btn btn-p" style="width:100%">تأكيد طلب الحجز</button>
+      <div class="form-msg" id="formMsg"></div>
+      <div class="track-box" id="trackBox">✅ تم استلام طلب الحجز بنجاح<br>رقم المتابعة الخاص بك:<br><b id="trackNum"></b></div>
+    </form>
+  </div>
+</section>
+
+<footer>جميع الحقوق محفوظة © 2024 — <b>رحلة الشفاء</b> | منصة السفر العلاجي للمرضى والمرافقين</footer>
+</div>
+
+<script>
+const c=document.getElementById('bgCanvas'),x=c.getContext('2d');let W,H,ps=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<60;i++)ps.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+.5,v:(Math.random()-.5)*.3,o:Math.random()*.3+.1});
+(function an(){x.clearRect(0,0,W,H);ps.forEach(p=>{p.x+=p.v;p.y+=p.v;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(14,116,144,'+p.o+')';x.fill()});requestAnimationFrame(an)})();
+
+// تبديل مريض / مرافق
+const bP=document.getElementById('btnPatient'),bC=document.getElementById('btnCompanion');
+const fP=document.getElementById('patientFields'),fC=document.getElementById('companionFields');
+function toggle(isPatient){
+  bP.classList.toggle('active',isPatient); bC.classList.toggle('active',!isPatient);
+  fP.style.display=isPatient?'block':'none'; fC.style.display=isPatient?'none':'block';
+  // تعطيل الحقول المخفية حتى لا تُطلب أثناء التحقق
+  fP.querySelectorAll('input,select,textarea').forEach(e=>e.required=isPatient);
+  fC.querySelectorAll('input,select,textarea').forEach(e=>e.required=!isPatient);
+}
+bP.onclick=()=>toggle(true); bC.onclick=()=>toggle(false);
+
+document.getElementById('regForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const msg=document.getElementById('formMsg');
+  const req=this.querySelectorAll('[required]');
+  for(const f of req){ if(!f.value.trim()){ msg.textContent='⚠️ يرجى تعبئة جميع الحقول المطلوبة'; msg.className='form-msg err'; f.focus(); return; } }
+  const num='APT-'+Math.floor(100000+Math.random()*900000);
+  document.getElementById('trackNum').textContent=num;
+  document.getElementById('trackBox').style.display='block';
+  msg.textContent=''; msg.className='form-msg';
+  this.reset(); toggle(true);
+  document.getElementById('trackBox').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
